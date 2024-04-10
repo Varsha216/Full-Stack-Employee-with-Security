@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<form class="form-inline my-5 " style="width: 60%; text-align:center; margin-left: 180px;">
+    <div class="container">
+        <span class="input-group-btn">
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="empid" placeholder="Search by Employee id" name="id" [(ngModel)]="id">
+            </div>
+            <button type="submit" class="btn btn-primary mb-4" (click)="findEmployeeById()">Search</button>
+        </span>
+    </div>
+</form>
+
+
+<div class="container">
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees ">
+                <td>{{emp.employeeId}}</td>
+                <td>{{emp.employeeName}}</td>
+                <td>{{emp.employeePhone}}</td>
+                <td>{{emp.employeLocation}}</td>
+                <td>{{emp.employeeEmail}}</td>
+                <td class="text-center">
+                    <div class="container">
+                        <button class="btn btn-danger btn-xs" (click)="deleteEmployee(emp.employeeId)">Delete</button>
+                        <button class="btn btn-primary" (click)="updateEmployee(emp.employeeId)">Update</button>
+                    </div>
+                </td>
+              </tr>
+        </tbody>
+        </table>
+        </div>
+    </div>

@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand">Employee Dashboard</a>
+    
+    <div class="userInfo">
+        <h6 *ngIf="userName">{{ userName }}</h6>
+    </div>
+    <button *ngIf="isLoggedIn && !isRegisteringEmp" type="button" class="btn btn-success" (click)="registerEmp()">Add Employee!</button>
+    <button *ngIf="isLoggedIn" type="button" class="btn btn-outline-danger" (click)="doLogout()">Logout</button>
+    <button *ngIf="!isLoggedIn" type="button" class="btn btn-success" (click)="doRegisteration()">Register Here!</button>
+    
+  </nav>

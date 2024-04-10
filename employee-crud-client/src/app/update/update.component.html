@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+<div class="container my-5">
+
+    <h3>Update Employee</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Employee Name</label>
+            <input type="text" [(ngModel)]="employee.employeeName" class="form-control" id="employeeName" name="employeeName" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label" >Phone</label>
+            <input type="text" [(ngModel)]="employee.employeePhone" class="form-control" id="employeePhone" name="employeePhone">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" >Location</label>
+        <input type="text" [(ngModel)]="employee.employeLocation" class="form-control" id="employeLocation" name="employeLocation">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" >Email</label>
+        <input type="text" [(ngModel)]="employee.employeeEmail" class="form-control" id="employeeEmail" name="employeeEmail">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
